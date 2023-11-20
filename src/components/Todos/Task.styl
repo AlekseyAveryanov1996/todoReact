@@ -1,0 +1,23 @@
+.task
+  display: flex
+  gap: 12px
+  &__value
+    flex-grow: 1
+  &__check
+    flex-shrink: 0
+    width 18px
+    height: 18px
+    border-radius: 50%
+    border: 2px solid #4EA8DE
+  &__delete
+    width 24px
+    height: 24px
+    cursor pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      svg
+        fill: #8284FA
+    svg
+      fill: #808080
