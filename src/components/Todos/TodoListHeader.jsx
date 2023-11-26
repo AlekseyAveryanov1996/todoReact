@@ -11,7 +11,7 @@ function TodoListsHeader({ allCount, sucsesCount }) {
           </div>
           <div className="lists__sucsess">
             Выполнено
-            <div className="count">0</div>
+            <div className="count">{sucsesCount}</div>
           </div>
         </div>
       </div>

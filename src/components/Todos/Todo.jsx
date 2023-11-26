@@ -11,6 +11,7 @@ function Todo() {
     : (localTasks = []);
 
   const [tasks, setTasks] = useState(localTasks); // передаем данные в useState для отрисовки;
+  const sucsesTask = tasks.filter((el) => el.status === true); // получаем количество выполненых задач
 
   function addTask() {
     let elem = document.querySelector('input[name="taskValue"]');
@@ -47,7 +48,10 @@ function Todo() {
   return (
     <div>
       <TodoForm addTask={addTask} />
-      <TodoListsHeader allCount={tasks.length} />
+      <TodoListsHeader
+        allCount={tasks.length}
+        sucsesCount={sucsesTask.length}
+      />
       {tasks.length < 1 ? (
         <TodoPugs />
       ) : (
